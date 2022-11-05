@@ -12,8 +12,6 @@ myLabel.pack()
 
 i=1
 
-
-
 def clicked():
         global i
         label = Label(root, text = i)

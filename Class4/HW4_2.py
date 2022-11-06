@@ -5,7 +5,7 @@ root=Tk()
 root.geometry('400x400+150+200')
 root.title("Class4_HW2")
 birth=Entry(root,font=('Arial',18))
-Label(root,text="Enter you birth date: \n Input format is yyyy.mm.dd").pack()
+Label(root, text="Enter you birth date: \n Input format is yyyy.mm.dd", fg = "Orange", font = ("Arial",18)).pack()
 def clicked():
     birth1=birth.get().split(".")
     Year = today.year - int(birth1[0])              
@@ -25,7 +25,7 @@ def clicked():
     Label(root,text=f"{Year} years old, {Month} months, {day} days.").pack(pady=20)
 
 
-Button2=Button(root,text="Enter!",command=clicked)
+Button2=Button(root, text = "Enter!", command = clicked, font = ("Arial", 18))
 
 birth.pack()
 Button2.pack()

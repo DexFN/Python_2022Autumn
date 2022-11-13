@@ -45,7 +45,7 @@ root.geometry("500x500")
 # mybutton1.pack(side = "left", padx = 10)
 # mybutton2.pack(side = "right", padx = 90)
 
-#---------------------------------------------------------
+#--------------------------------------------------------- 
 
 # #建立 Label 標籤
 # mybutton1 = Button(root, text = "West")

@@ -1,7 +1,7 @@
 from tkinter import *
 root = Tk()
 root.title("Class5")
-root.geometry("250x150")
+root.geometry("220x120")
 
 mylabel1 = Label(root, text = "三人座沙發 綠色／灰色／黑色")
 mylabel2 = Label(root, text = "NT. 28,900")

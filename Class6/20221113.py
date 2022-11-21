@@ -88,22 +88,45 @@ root.title("Class6")
 
 #---------------------------------------------------------
 
-root.geometry("350x100")
-def open(event=None): print("Open")
-def save(event=None): print("Save")
-def exit(event=None):
-    print("Exit")
-    root.destroy()
-menubar = Menu(root)
-filemenu = Menu(menubar)
-filemenu.add_command(label="Open", command=open, accelerator="Command+O")
-filemenu.add_command(label="Save", command=save, accelerator="Command+S")
-filemenu.add_command(label="Exit", command=exit, accelerator="Command+E")
-menubar.add_cascade(label="File", menu=filemenu)
-root.bind_all("<Command-o>", open)
-root.bind_all("<Command-s>", save)
-root.bind_all("<Command-e>", exit)
-root.config(menu=menubar)
+# root.geometry("350x100")
+# def open(event=None): print("Open")
+# def save(event=None): print("Save")
+# def exit(event=None):
+#     print("Exit")
+#     root.destroy()
+# menubar = Menu(root)
+# filemenu = Menu(menubar)
+# filemenu.add_command(label="Open", command=open, accelerator="Command+O")
+# filemenu.add_command(label="Save", command=save, accelerator="Command+S")
+# filemenu.add_command(label="Exit", command=exit, accelerator="Command+E")
+# menubar.add_cascade(label="File", menu=filemenu)
+# root.bind_all("<Command-o>", open)
+# root.bind_all("<Command-s>", save)
+# root.bind_all("<Command-e>", exit)
+# root.config(menu=menubar)
+
+#---------------------------------------------------------
+
+def open(): 
+    menubar2.entryconfig("Start", state="normal")
+def start():
+    menubar1.entryconfig("See", state="normal")
+#建立主選單
+menu = Menu(root)
+#主選單項目
+menubar1 = Menu(menu)
+menubar1.add_command(label="Open", command=open)
+menubar1.add_command(label="See", state="disable")
+menubar1.add_command(label="Close")
+menu.add_cascade(label="First", menu=menubar1)
+
+menubar2 = Menu(menu)
+menubar2.add_command(label="Start", state="disable", command=start)
+menubar2.add_command(label="End")
+menu.add_cascade(label="Second", menu=menubar2)
+root.config(menu=menu)
+
+root.mainloop()
 
 #---------------------------------------------------------
 

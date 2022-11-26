@@ -11,7 +11,7 @@ Dex = FortniteStats("Xbox Series S", "Level 16", "3 Wins")
 Patient = FortniteStats("Playstation 5", "Level 5", "1 Wins")
 Kramer = FortniteStats("Playstation 5", "Level 30", "1 Wins")
 
-if Name == "p4nda":
+if Name == "Dex":
     Dex.printStats()
 if Name == "Patient":
     Patient.printStats()

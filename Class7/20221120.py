@@ -2,7 +2,6 @@
 
 #引入tkiner module
 from tkinter import *
-from turtle import left
 root=Tk()
 root.title("Class7")
 root.geometry("350x100")
